@@ -8,12 +8,12 @@ Playing cards are used as reels for the slot machine. Each slot machine reel can
 
 The next four random values (vards) are chosen as shown below.
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=z_n%20%3D%20n_%7Bn-1%7D%20%5Ccdot%20607%20%5C%25%20990881%2C%5C%20z_0%20%3D%20%5Bz_1%2C%20z_2%2C%20z_3%2C%20z_4%5D%5ET%0A&bc=White&fc=Black&im=png&fs=12&ff=arev&edit=0)
+![equation1](http://www.sciweavers.org/tex2img.php?eq=z_n%20%3D%20n_%7Bn-1%7D%20%5Ccdot%20607%20%5C%25%20990881%2C%5C%20z_0%20%3D%20%5Bz_1%2C%20z_2%2C%20z_3%2C%20z_4%5D%5ET%0A&bc=White&fc=Black&im=png&fs=12&ff=arev&edit=0)
 <!--
   z_n = n_{n-1} \cdot 607 \% 990881,\ z_0 = [z_1, z_2, z_3, z_4]^T
 -->
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=r%20%3D%20%5Cleft%28%20%5Cleft%28z_n%20-%20%5Cbegin%7Bbmatrix%7D1%5C%5C1%5C%5C1%5C%5C1%5Cend%7Bbmatrix%7D%5Cright%29%20%5Ccdot%20%20%5Cbegin%7Bbmatrix%7D977%5C%5C607%5C%5C1069%5C%5C547%5Cend%7Bbmatrix%7D%20%2B%20u%20%5Cright%29%20%5C%25%2014%20%2B%20%5Cbegin%7Bbmatrix%7D1%5C%5C1%5C%5C1%5C%5C1%5Cend%7Bbmatrix%7D&bc=White&fc=Black&im=png&fs=12&ff=arev&edit=0)
+![equation2](http://www.sciweavers.org/tex2img.php?eq=r%20%3D%20%5Cleft%28%20%5Cleft%28z_n%20-%20%5Cbegin%7Bbmatrix%7D1%5C%5C1%5C%5C1%5C%5C1%5Cend%7Bbmatrix%7D%5Cright%29%20%5Ccdot%20%20%5Cbegin%7Bbmatrix%7D977%5C%5C607%5C%5C1069%5C%5C547%5Cend%7Bbmatrix%7D%20%2B%20u%20%5Cright%29%20%5C%25%2014%20%2B%20%5Cbegin%7Bbmatrix%7D1%5C%5C1%5C%5C1%5C%5C1%5Cend%7Bbmatrix%7D&bc=White&fc=Black&im=png&fs=12&ff=arev&edit=0)
 <!--
   r = \left( \left(z_n - \begin{bmatrix}1\\1\\1\\1\end{bmatrix}\right) \cdot  \begin{bmatrix}977\\607\\1069\\547\end{bmatrix} + u \right) \% 14 + \begin{bmatrix}1\\1\\1\\1\end{bmatrix}
 -->
@@ -28,13 +28,14 @@ Let's assume the user has provided the number `12886`, which in hex decimal is `
 
 Let assume `z_{n-1}` is `[5, 3, 8, 2]^T`, then `z_n` is defined as:
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=z_n%20%3D%20%5Cbegin%7Bbmatrix%7D5%5C%5C3%5C%5C8%5C%5C2%5Cend%7Bbmatrix%7D%20%5Ccdot%20607%20%5C%25%20990881%20%3D%20%5Cbegin%7Bbmatrix%7D3035%5C%5C1821%5C%5C4856%5C%5C1214%5Cend%7Bbmatrix%7D&bc=White&fc=Black&im=png&fs=12&ff=arev&edit=0)
+![equation3](http://www.sciweavers.org/tex2img.php?eq=z_n%20%3D%20%5Cbegin%7Bbmatrix%7D5%5C%5C3%5C%5C8%5C%5C2%5Cend%7Bbmatrix%7D%20%5Ccdot%20607%20%5C%25%20990881%20%3D%20%5Cbegin%7Bbmatrix%7D3035%5C%5C1821%5C%5C4856%5C%5C1214%5Cend%7Bbmatrix%7D&bc=White&fc=Black&im=png&fs=12&ff=arev&edit=0)
 <!--
   z_n = \begin{bmatrix}5\\3\\8\\2\end{bmatrix} \cdot 607 \% 990881 = \begin{bmatrix}3035\\1821\\4856\\1214\end{bmatrix}
 -->
 
 Resulting in the following reel:
-![equation](http://www.sciweavers.org/tex2img.php?eq=r%20%3D%20%5Cleft%28%20%5Cleft%28%5Cbegin%7Bbmatrix%7D3035%5C%5C1821%5C%5C4856%5C%5C1214%5Cend%7Bbmatrix%7D%20-%20%5Cbegin%7Bbmatrix%7D1%5C%5C1%5C%5C1%5C%5C1%5Cend%7Bbmatrix%7D%5Cright%29%20%5Ccdot%20%5Cbegin%7Bbmatrix%7D977%5C%5C607%5C%5C1069%5C%5C547%5Cend%7Bbmatrix%7D%20%2B%20%5Cbegin%7Bbmatrix%7D3%5C%5C2%5C%5C5%5C%5C6%5Cend%7Bbmatrix%7D%5Cright%29%20%5C%25%2014%20%2B%20%5Cbegin%7Bbmatrix%7D1%5C%5C1%5C%5C1%5C%5C1%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D2%5C%5C3%5C%5C5%5C%5C2%5Cend%7Bbmatrix%7D&bc=White&fc=Black&im=png&fs=12&ff=arev&edit=0)
+
+![equation4](http://www.sciweavers.org/tex2img.php?eq=r%20%3D%20%5Cleft%28%20%5Cleft%28%5Cbegin%7Bbmatrix%7D3035%5C%5C1821%5C%5C4856%5C%5C1214%5Cend%7Bbmatrix%7D%20-%20%5Cbegin%7Bbmatrix%7D1%5C%5C1%5C%5C1%5C%5C1%5Cend%7Bbmatrix%7D%5Cright%29%20%5Ccdot%20%5Cbegin%7Bbmatrix%7D977%5C%5C607%5C%5C1069%5C%5C547%5Cend%7Bbmatrix%7D%20%2B%20%5Cbegin%7Bbmatrix%7D3%5C%5C2%5C%5C5%5C%5C6%5Cend%7Bbmatrix%7D%5Cright%29%20%5C%25%2014%20%2B%20%5Cbegin%7Bbmatrix%7D1%5C%5C1%5C%5C1%5C%5C1%5Cend%7Bbmatrix%7D%20%3D%20%5Cbegin%7Bbmatrix%7D2%5C%5C3%5C%5C5%5C%5C2%5Cend%7Bbmatrix%7D&bc=White&fc=Black&im=png&fs=12&ff=arev&edit=0)
 <!--
   r = \left( \left(\begin{bmatrix}3035\\1821\\4856\\1214\end{bmatrix} - \begin{bmatrix}1\\1\\1\\1\end{bmatrix}\right) \cdot \begin{bmatrix}977\\607\\1069\\547\end{bmatrix} + \begin{bmatrix}3\\2\\5\\6\end{bmatrix}\right) \% 14 + \begin{bmatrix}1\\1\\1\\1\end{bmatrix} = \begin{bmatrix}2\\3\\5\\2\end{bmatrix}
 -->
